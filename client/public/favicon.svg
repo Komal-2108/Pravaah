@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="pravaahGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#087F8C" />
+      <stop offset="100%" stop-color="#1F9D73" />
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="46" fill="#101828" />
+  <path d="M25 55 C 35 30, 45 70, 55 45 C 65 20, 75 60, 80 40" stroke="url(#pravaahGrad)" stroke-width="8" stroke-linecap="round" fill="none" />
+  <circle cx="25" cy="55" r="4" fill="#087F8C" />
+  <circle cx="55" cy="45" r="4" fill="#1F9D73" />
+  <circle cx="80" cy="40" r="5" fill="#E9795F" />
+</svg>

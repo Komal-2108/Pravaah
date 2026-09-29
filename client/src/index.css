@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --forest: #1F2A24;
+    --olive: #34483D;
+    --sage: #687C6B;
+    --copper: #B68B5E;
+    --sand: #D8C6A5;
+    --cream: #F5F0E6;
+    --bg: #FCFAF5;
+    --amber: #C9822B;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--forest);
+    font-family: 'Nunito', 'DM Sans', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display, .font-rounded {
+    font-family: 'Fredoka', 'Nunito', sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  .font-handwritten {
+    font-family: 'Kalam', 'Caveat', cursive;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-feature-settings: "tnum" 1, "zero" 1;
+  }
+}
+
+/* Warm Card & Glass Pill Styles */
+.warm-card {
+  background-color: var(--cream);
+  border-radius: 24px;
+  border: 1px solid rgba(216, 198, 165, 0.4);
+  box-shadow: 0 8px 24px rgba(31, 42, 36, 0.08);
+}
+
+.warm-card-white {
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  border: 1px solid rgba(216, 198, 165, 0.35);
+  box-shadow: 0 8px 24px rgba(31, 42, 36, 0.06);
+}
+
+.floating-glass-chip {
+  background: rgba(245, 240, 230, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 28px rgba(31, 42, 36, 0.12);
+  border-radius: 9999px;
+}
+
+/* Floating animation for chips */
+@keyframes slowFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float-slow {
+  animation: slowFloat 6s ease-in-out infinite;
+}
+
+.animate-float-delay-1 {
+  animation: slowFloat 6s ease-in-out 1.5s infinite;
+}
+
+.animate-float-delay-2 {
+  animation: slowFloat 6s ease-in-out 3s infinite;
+}
+
+.animate-float-delay-3 {
+  animation: slowFloat 6s ease-in-out 4.5s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow,
+  .animate-float-delay-1,
+  .animate-float-delay-2,
+  .animate-float-delay-3 {
+    animation: none;
+  }
+}
+
+/* Friendly Warm Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cream);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sand);
+  border-radius: 999px;
+  border: 1px solid var(--cream);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sage);
+}

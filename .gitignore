@@ -1,0 +1,85 @@
+# ===== Dependencies =====
+node_modules/
+**/node_modules/
+
+# ===== Environment variables / secrets =====
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ===== Logs =====
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===== Frontend build output =====
+client/build/
+client/dist/
+client/.next/
+client/.cache/
+client/.vite/
+build/
+dist/
+.parcel-cache/
+
+# ===== Backend build / runtime =====
+server/dist/
+server/build/
+server/uploads/
+server/tmp/
+tmp/
+*.pid
+*.seed
+*.pid.lock
+
+# ===== Database (local MongoDB data) =====
+data/
+db/
+mongo-data/
+*.sqlite
+*.sqlite3
+dump/
+*.bson
+mongod.lock
+
+# ===== Testing / coverage =====
+coverage/
+.nyc_output/
+*.lcov
+
+# ===== Cache =====
+.eslintcache
+.stylelintcache
+.npm/
+.yarn/cache/
+.yarn/install-state.gz
+.temp/
+.cache/
+
+# ===== Editor / IDE =====
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== OS files =====
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ===== Docker (optional) =====
+docker-compose.override.yml
+
+# ===== Misc =====
+*.tgz
+*.zip
+.vercel
+.netlify
